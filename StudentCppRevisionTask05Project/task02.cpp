@@ -42,11 +42,5 @@ bool task02(int number) {
 		rev = rev * 10 + number % 10;
 		number /= 10;
 	}
-	while (orig > 0 || rev > 0) {
-		if (orig % 10 != rev % 10) {
-			return false;
-		}
-		orig /= 10; rev /= 10;
-	}
-	return true;
+	return rev==orig;
 }
